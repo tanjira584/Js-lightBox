@@ -1,0 +1,55 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title>Simple Javascript Light Box</title>
+	<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+	<div class="container">
+		<div class="row">
+			<div class="column">
+				<img src="images/2.jpg" alt="" class="modalImg" onClick='openModal(); currentImg(1)' />
+			</div>
+			<div class="column">
+				<img src="images/3.jpg" alt="" class="modalImg" onClick='openModal(); currentImg(2)' />
+			</div>
+			<div class="column">
+				<img src="images/4.jpg" alt="" class="modalImg" onClick='openModal(); currentImg(3)' />
+			</div>
+		</div>
+	</div>
+	<div class="modal" id="modal">
+		<div class="modal-content">
+			<div id="closeBtn" onClick='closeModal()'>Close</div>
+			<div class="slide">
+				<img src="images/2.jpg" alt="" />
+			</div>
+			<div class="slide">
+				<img src="images/3.jpg" alt="" />
+			</div>
+			<div class="slide">
+				<img src="images/4.jpg" alt="" />
+			</div>
+			<a id='prev' onClick='plusSlide(-1)'>Prev</a>
+			<a id='next' onClick='plusSlide(1)'>Next</a>
+		</div>
+		<div class="btnImg">
+			<div class="column">
+				<img src="images/2.jpg" alt="" class="demo active" onClick='currentImg(1)' />
+			</div>
+			<div class="column">
+				<img src="images/3.jpg" alt="" class="demo" onClick='currentImg(2)' />
+			</div>
+			<div class="column">
+				<img src="images/4.jpg" alt="" class="demo" onClick='currentImg(3)' />
+			</div>
+		</div>
+	</div>
+	
+	
+	
+	<script type='text/javascript' src='custom.js'></script>
+</body>
+</html>
